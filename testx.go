@@ -8,15 +8,14 @@ package testx
 
 import (
 	"fmt"
+	"math"
 	"testing"
 )
 
-// Tolerance adjust the accuracy of the function.
-const tolerance float64 = 0.00000001
-
 // EqualFloat tests the expected with the actual value.
 func EqualFloat(t *testing.T, expected, actual float64, msg string) {
-	if !((expected-actual) < tolerance && (actual-expected) < tolerance) {
+	maxmul := math.Max(1.0, math.Max(expected, actual))
+	if math.Abs(expected-actual) > (math.SmallestNonzeroFloat64 * maxmul) {
 		t.Errorf(fmt.Sprintf("%s not equal.\n"+
 			"expected: %g\n"+
 			"actual  : %g", msg, expected, actual))
