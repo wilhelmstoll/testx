@@ -2,7 +2,7 @@
 
 Pure go implementation of a test framework.
 
-**Currently only the EqualFloat function is implemented.**
+**Currently only the EqualFloat function is implemented!**
 
 ## Installation
 
