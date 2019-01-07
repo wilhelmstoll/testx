@@ -1,4 +1,4 @@
-# testx [![GoDoc](https://godoc.org/github.com/wilhelmstoll/testx?status.svg)](https://godoc.org/github.com/wilhelmstoll/testx)
+# testx [![GoDoc](https://godoc.org/github.com/wilhelmstoll/testx?status.svg)](https://godoc.org/github.com/wilhelmstoll/testx) [![Build Status](https://travis-ci.org/wilhelmstoll/testx.svg?branch=master)](https://travis-ci.org/wilhelmstoll/testx)
 
 Pure go implementation of a test framework.
 
