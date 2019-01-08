@@ -1,8 +1,12 @@
+// Copyright 2019 Wilhelm Stoll. All rights reserved.
+// Use of this source code is governed by a MIT-style
+// license that can be found in the LICENSE file.
+
 package testx
 
 import "testing"
 
-func TestA(t *testing.T) {
+func TestEqualFloat(t *testing.T) {
 	cases := []struct {
 		a, b float64
 		msg  string
@@ -13,8 +17,9 @@ func TestA(t *testing.T) {
 		{1.1, 1.1, "medium sized float 1"},
 		{1.121212121212121212, 1.121212121212121212, "medium sized float 2"},
 		{0.0000000000000000000000000000000000000000001, 0.0000000000000000000000000000000000000000001, "smaller float"},
-		{4.123 + 2.3 * 4.3 / 2.3, 4.3 / 2.3 * 2.3 + 4.123, "some calc"},
+		{4.123 + 2.3*4.3/2.3, 4.3/2.3*2.3 + 4.123, "some calc"},
 	}
+
 	for _, c := range cases {
 		EqualFloat(t, c.a, c.b, c.msg)
 	}
