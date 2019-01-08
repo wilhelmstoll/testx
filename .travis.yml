@@ -10,4 +10,4 @@ env:
     - GOARCH=arm GOARM=6
 
 script:
-  - go build && go test -race -v
+  - go build -race -v
