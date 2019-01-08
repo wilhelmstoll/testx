@@ -8,6 +8,7 @@ package testx
 
 import (
 	"fmt"
+	"math"
 	"testing"
 )
 
@@ -16,7 +17,7 @@ const tolerance float64 = 0.00000001
 
 // EqualFloat tests the expected with the actual value.
 func EqualFloat(t *testing.T, expected, actual float64, msg string) {
-	if !((expected-actual) < tolerance && (actual-expected) < tolerance) {
+	if math.Abs(expected-actual) > tolerance {
 		t.Errorf(fmt.Sprintf("%s not equal.\n"+
 			"expected: %g\n"+
 			"actual  : %g", msg, expected, actual))
